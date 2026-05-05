@@ -10,7 +10,7 @@ function CabinCard({ cabin }) {
       <div className="relative w-full md:w-2/5 aspect-[4/3] md:aspect-auto">
         <Image
           src={image}
-          alt={`Cabin ${name}`}
+          alt={`Room ${name}`}
           fill
           sizes="(max-width: 768px) 100vw, 33vw"
           className="border-b md:border-b-0 md:border-r border-primary-800 object-cover"
@@ -20,7 +20,7 @@ function CabinCard({ cabin }) {
       <div className="flex-grow">
         <div className="pt-5 pb-4 px-5 sm:px-7 bg-primary-950">
           <h3 className="text-accent-500 font-semibold text-xl sm:text-2xl mb-3">
-            Cabin {name}
+            Room {name}
           </h3>
 
           <div className="flex gap-3 items-center mb-2">
@@ -53,7 +53,7 @@ function CabinCard({ cabin }) {
 
         <div className="bg-primary-950 border-t border-t-primary-800 text-right">
           <Link
-            href={`/cabins/${_id}`}
+            href={`/rooms/${_id}`}
             className="border-l border-primary-800 py-3 sm:py-4 px-5 sm:px-6 inline-block hover:bg-accent-600 transition-all hover:text-primary-900 text-sm sm:text-base"
           >
             Details & reservation &rarr;

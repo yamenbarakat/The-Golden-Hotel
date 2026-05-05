@@ -33,7 +33,7 @@ function ReservationCard({ booking, onDelete }) {
       <div className="flex-grow px-5 sm:px-6 py-4 md:py-3 flex flex-col gap-2">
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
           <h3 className="text-lg sm:text-xl font-semibold">
-            {numNights} nights in Cabin {name}
+            {numNights} nights in Room {name}
           </h3>
           {isPast(new Date(startDate)) ? (
             <span className="bg-yellow-800 text-yellow-200 h-7 px-3 uppercase text-xs font-bold flex items-center rounded-sm">

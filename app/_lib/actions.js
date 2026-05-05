@@ -135,7 +135,7 @@ export async function createBooking(bookingData, formData) {
 
   await createBookingData(newBooking);
 
-  revalidatePath(`/cabins/${bookingData.cabinId}`);
+  revalidatePath(`/rooms/${bookingData.cabinId}`);
 
-  redirect("/cabins/thankyou");
+  redirect("/rooms/thankyou");
 }

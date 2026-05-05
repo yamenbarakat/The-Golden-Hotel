@@ -41,11 +41,11 @@ function MobileNav({ session }) {
           <ul className="flex flex-col text-base">
             <li>
               <Link
-                href="/cabins"
+                href="/rooms"
                 onClick={handleClose}
                 className="block px-4 py-3 hover:bg-primary-900 transition-colors"
               >
-                Cabins
+                Rooms
               </Link>
             </li>
             <li>
@@ -55,6 +55,15 @@ function MobileNav({ session }) {
                 className="block px-4 py-3 hover:bg-primary-900 transition-colors"
               >
                 About
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/contact"
+                onClick={handleClose}
+                className="block px-4 py-3 hover:bg-primary-900 transition-colors"
+              >
+                Contact
               </Link>
             </li>
             <li>

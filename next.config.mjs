@@ -9,6 +9,12 @@ const nextConfig = {
         port: "",
         pathname: "/**",
       },
+      {
+        protocol: "https",
+        hostname: "images.unsplash.com", // ✅ Hotel room photos from Unsplash CDN
+        port: "",
+        pathname: "/**",
+      },
     ],
   },
 };

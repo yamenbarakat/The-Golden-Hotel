@@ -3,7 +3,7 @@
 import { useSearchParams, usePathname, useRouter } from "next/navigation";
 
 const filters = [
-  { label: "All cabins", value: "all" },
+  { label: "All rooms", value: "all" },
   { label: "2–3 guests", value: "small" },
   { label: "4–7 guests", value: "medium" },
   { label: "8–12 guests", value: "large" },
@@ -25,7 +25,7 @@ function Filter() {
   const activeFilter = searchParams.get("capacity") ?? "all";
 
   return (
-    <nav aria-label="Filter cabins by capacity">
+    <nav aria-label="Filter rooms by capacity">
       <ul className="flex flex-wrap border border-primary-800 w-full sm:w-fit text-sm sm:text-base" role="list">
         {filters.map((filter) => (
           <li key={filter.value}>

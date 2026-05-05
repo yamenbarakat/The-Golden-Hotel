@@ -15,10 +15,10 @@ export default async function Navigation() {
       <ul className="hidden sm:flex flex-col sm:flex-row gap-4 sm:gap-10 lg:gap-16 items-start sm:items-center">
         <li>
           <Link
-            href="/cabins"
+            href="/rooms"
             className="hover:text-accent-400 transition-colors"
           >
-            Cabins
+            Rooms
           </Link>
         </li>
         <li>
@@ -27,6 +27,14 @@ export default async function Navigation() {
             className="hover:text-accent-400 transition-colors"
           >
             About
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="/contact"
+            className="hover:text-accent-400 transition-colors"
+          >
+            Contact
           </Link>
         </li>
         <li>
