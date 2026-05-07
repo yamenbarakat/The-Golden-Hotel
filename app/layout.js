@@ -1,6 +1,6 @@
-import { Cormorant_Garamond } from "next/font/google";
+import { DM_Sans } from "next/font/google";
 
-const cormorant = Cormorant_Garamond({
+const dmSans = DM_Sans({
   subsets: ["latin"],
   weight: ["300", "400", "500", "600", "700"],
   display: "swap",
@@ -23,7 +23,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${cormorant.className} antialiased bg-primary-950 text-primary-100 min-h-screen flex flex-col relative`}
+        className={`${dmSans.className} antialiased bg-primary-950 text-primary-100 min-h-screen flex flex-col relative`}
         suppressHydrationWarning
       >
         <Header />
