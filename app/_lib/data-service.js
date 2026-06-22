@@ -49,11 +49,24 @@ export const getCabin = async function (id) {
 export async function getCountries() {
   try {
     const res = await fetch(
-      "https://restcountries.com/v2/all?fields=name,flag",
+      "https://countriesnow.space/api/v0.1/countries/flag/images",
     );
-    const countries = await res.json();
-    return countries;
-  } catch {
+
+    if (!res.ok) throw new Error("Countries request failed");
+
+    const { data: countries } = await res.json();
+
+    if (!Array.isArray(countries)) throw new Error("Invalid countries data");
+
+    return countries
+      .map((country) => ({
+        name: country.name,
+        flag: country.flag ?? "",
+      }))
+      .filter((country) => country.name)
+      .sort((a, b) => a.name.localeCompare(b.name));
+  } catch (error) {
+    console.error("Error fetching countries:", error);
     throw new Error("Could not fetch countries");
   }
 }

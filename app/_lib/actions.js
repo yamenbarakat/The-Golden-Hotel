@@ -63,6 +63,8 @@ export async function updateUser(prevState, formData) {
 
   const nationalID = formData.get("nationalID");
   const nationalityRaw = formData.get("nationality");
+  if (!nationalityRaw) return { error: "Please select a country" };
+
   const [nationality, countryFlag] = nationalityRaw.split("%");
 
   if (nationalID !== "" && !/^[a-zA-Z0-9]{6,12}$/.test(nationalID))
