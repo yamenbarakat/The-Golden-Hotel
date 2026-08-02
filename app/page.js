@@ -1,21 +1,20 @@
 import Link from "next/link";
 import Image from "next/image";
-import bg from "@/public/bg.png";
 
 export default function Page() {
   return (
     <main className="mt-16 sm:mt-24">
       <Image
-        src={bg}
+        src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=2400&q=80"
         fill
         sizes="100vw"
-        placeholder="blur"
+        priority
         quality={80}
         className="object-cover object-center"
-        alt="Luxury hotel exterior at golden hour with reflecting pool"
+        alt="Luxury hotel suite with floor-to-ceiling windows at The Golden Hotel"
       />
       {/* Dark overlay for contrast */}
-      <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/60 to-black/30" />
+      <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/75 to-black/55" />
 
       <div className="relative z-10 text-center px-4 sm:px-8 max-w-3xl mx-auto">
         <h1 className="text-4xl sm:text-6xl lg:text-8xl text-primary-50 mb-6 sm:mb-8 tracking-tight font-light">
