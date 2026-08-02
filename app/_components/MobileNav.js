@@ -36,7 +36,7 @@ function MobileNav({ session }) {
       {open ? (
         <div
           id="mobile-nav"
-          className="absolute right-0 mt-3 w-56 rounded-md border border-primary-800 bg-primary-950 shadow-lg z-20"
+          className="absolute right-0 mt-3 w-56 rounded-md border border-primary-800 bg-primary-950 shadow-lg z-50"
         >
           <ul className="flex flex-col text-base">
             <li>
